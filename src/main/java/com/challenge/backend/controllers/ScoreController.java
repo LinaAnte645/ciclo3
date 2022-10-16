@@ -29,7 +29,12 @@ public class ScoreController {
         return new ResponseEntity<>(scoreService.create(score), HttpStatus.CREATED);
     }
 
-    @GetMapping(path = "All")
+    @PostMapping(path = "all")
+    public ResponseEntity<?> createAll(@RequestBody Score score) {
+        return new ResponseEntity<>(scoreService.create(score), HttpStatus.CREATED);
+    }
+
+    @GetMapping(path = "all")
     public ResponseEntity<?> readAll() {
         return new ResponseEntity<>(scoreService.readAll(), HttpStatus.OK);
     }

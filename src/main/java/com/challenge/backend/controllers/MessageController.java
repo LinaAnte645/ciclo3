@@ -29,7 +29,12 @@ public class MessageController {
         return new ResponseEntity<>(messageService.create(message), HttpStatus.CREATED);
     }
 
-    @GetMapping(path = "All")
+    @PostMapping(path = "all")
+    public ResponseEntity<?> createAll(@RequestBody Message message) {
+        return new ResponseEntity<>(messageService.create(message), HttpStatus.CREATED);
+    }
+
+    @GetMapping(path = "all")
     public ResponseEntity<?> readAll() {
         return new ResponseEntity<>(messageService.readAll(), HttpStatus.OK);
     }

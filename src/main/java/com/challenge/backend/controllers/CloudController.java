@@ -28,7 +28,12 @@ public class CloudController {
         return new ResponseEntity<>(cloudService.create(cloud), HttpStatus.CREATED);
     }
 
-    @GetMapping(path = "All")
+    @PostMapping(path = "all")
+    public ResponseEntity<?> createAll(@RequestBody Cloud cloud) {
+        return new ResponseEntity<>(cloudService.create(cloud), HttpStatus.CREATED);
+    }
+
+    @GetMapping(path = "all")
     public ResponseEntity<?> readAll() {
         return new ResponseEntity<>(cloudService.readAll(), HttpStatus.OK);
     }

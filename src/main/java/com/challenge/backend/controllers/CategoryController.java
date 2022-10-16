@@ -29,6 +29,11 @@ public class CategoryController {
         return new ResponseEntity<>(categoryService.create(category), HttpStatus.CREATED);
     }
 
+    @PostMapping(path = "all")
+    public ResponseEntity<?> createAll(@RequestBody Category category) {
+        return new ResponseEntity<>(categoryService.create(category), HttpStatus.CREATED);
+    }
+
     @GetMapping(path = "all")
     public ResponseEntity<?> readAll() {
         return new ResponseEntity<>(categoryService.readAll(), HttpStatus.OK);

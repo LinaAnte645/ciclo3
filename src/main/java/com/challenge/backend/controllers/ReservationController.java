@@ -28,7 +28,12 @@ public class ReservationController {
         return new ResponseEntity<>(reservationService.create(reservation), HttpStatus.CREATED);
     }
 
-    @GetMapping(path = "All")
+    @PostMapping(path = "all")
+    public ResponseEntity<?> createAll(@RequestBody Reservation reservation) {
+        return new ResponseEntity<>(reservationService.create(reservation), HttpStatus.CREATED);
+    }
+
+    @GetMapping(path = "all")
     public ResponseEntity<?> readAll() {
         return new ResponseEntity<>(reservationService.readAll(), HttpStatus.OK);
     }

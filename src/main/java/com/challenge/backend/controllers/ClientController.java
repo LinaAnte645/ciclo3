@@ -29,6 +29,11 @@ public class ClientController {
         return new ResponseEntity<>(clientService.create(client), HttpStatus.CREATED);
     }
 
+    @PostMapping(path = "all")
+    public ResponseEntity<?> createAll(@RequestBody Client client) {
+        return new ResponseEntity<>(clientService.create(client), HttpStatus.CREATED);
+    }
+
     @GetMapping(path = "all")
     public ResponseEntity<?> readAll() {
         return new ResponseEntity<>(clientService.readAll(), HttpStatus.OK);

@@ -49,4 +49,8 @@ public class Reservation {
     @ManyToOne(fetch = FetchType.EAGER)
     private Client client;
 
+    @JoinColumn(nullable = true)
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Score score;
+
 }
