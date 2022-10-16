@@ -46,12 +46,12 @@ public class ScoreController {
 
     @PutMapping(path = "update")
     public ResponseEntity<?> update(@RequestBody Score score) {
-        return new ResponseEntity<>(scoreService.update(score), HttpStatus.OK);
+        return new ResponseEntity<>(scoreService.update(score), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "all")
     public ResponseEntity<?> updateAll(@RequestBody Score score) {
-        return new ResponseEntity<>(scoreService.update(score), HttpStatus.OK);
+        return new ResponseEntity<>(scoreService.update(score), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "all")

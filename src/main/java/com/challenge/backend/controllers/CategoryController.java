@@ -46,12 +46,12 @@ public class CategoryController {
 
     @PutMapping(path = "update")
     public ResponseEntity<?> update(@RequestBody Category category) {
-        return new ResponseEntity<>(categoryService.update(category), HttpStatus.OK);
+        return new ResponseEntity<>(categoryService.update(category), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "all")
     public ResponseEntity<?> updateAll(@RequestBody Category category) {
-        return new ResponseEntity<>(categoryService.update(category), HttpStatus.OK);
+        return new ResponseEntity<>(categoryService.update(category), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "all")

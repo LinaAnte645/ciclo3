@@ -45,12 +45,12 @@ public class ReservationController {
 
     @PutMapping(path = "update")
     public ResponseEntity<?> update(@RequestBody Reservation reservation) {
-        return new ResponseEntity<>(reservationService.update(reservation), HttpStatus.OK);
+        return new ResponseEntity<>(reservationService.update(reservation), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "all")
     public ResponseEntity<?> updateAll(@RequestBody Reservation reservation) {
-        return new ResponseEntity<>(reservationService.update(reservation), HttpStatus.OK);
+        return new ResponseEntity<>(reservationService.update(reservation), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "all")

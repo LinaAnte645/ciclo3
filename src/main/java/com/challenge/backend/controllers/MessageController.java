@@ -46,12 +46,12 @@ public class MessageController {
 
     @PutMapping(path = "update")
     public ResponseEntity<?> update(@RequestBody Message message) {
-        return new ResponseEntity<>(messageService.update(message), HttpStatus.OK);
+        return new ResponseEntity<>(messageService.update(message), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "all")
     public ResponseEntity<?> updateAll(@RequestBody Message message) {
-        return new ResponseEntity<>(messageService.update(message), HttpStatus.OK);
+        return new ResponseEntity<>(messageService.update(message), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "all")

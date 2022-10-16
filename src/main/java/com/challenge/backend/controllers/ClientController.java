@@ -46,12 +46,12 @@ public class ClientController {
 
     @PutMapping(path = "update")
     public ResponseEntity<?> update(@RequestBody Client client) {
-        return new ResponseEntity<>(clientService.update(client), HttpStatus.OK);
+        return new ResponseEntity<>(clientService.update(client), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "all")
     public ResponseEntity<?> updateAll(@RequestBody Client client) {
-        return new ResponseEntity<>(clientService.update(client), HttpStatus.OK);
+        return new ResponseEntity<>(clientService.update(client), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "all")

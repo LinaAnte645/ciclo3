@@ -45,12 +45,12 @@ public class CloudController {
 
     @PutMapping(path = "update")
     public ResponseEntity<?> update(@RequestBody Cloud cloud) {
-        return new ResponseEntity<>(cloudService.update(cloud), HttpStatus.OK);
+        return new ResponseEntity<>(cloudService.update(cloud), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "all")
     public ResponseEntity<?> updateAll(@RequestBody Cloud cloud) {
-        return new ResponseEntity<>(cloudService.update(cloud), HttpStatus.OK);
+        return new ResponseEntity<>(cloudService.update(cloud), HttpStatus.CREATED);
     }
 
     @DeleteMapping(path = "all")
