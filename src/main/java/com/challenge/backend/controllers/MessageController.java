@@ -56,7 +56,7 @@ public class MessageController {
 
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
-        return new ResponseEntity<>(messageService.deleteAll(), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(messageService.deleteAll(), HttpStatus.OK);
     }
 
     @DeleteMapping(path = "{id}")

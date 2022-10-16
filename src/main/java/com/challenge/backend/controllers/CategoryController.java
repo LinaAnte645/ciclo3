@@ -56,7 +56,7 @@ public class CategoryController {
 
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
-        return new ResponseEntity<>(categoryService.deleteAll(), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(categoryService.deleteAll(), HttpStatus.OK);
     }
 
     @DeleteMapping(path = "{id}")

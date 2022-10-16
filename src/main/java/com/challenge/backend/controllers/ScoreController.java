@@ -56,7 +56,7 @@ public class ScoreController {
 
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
-        return new ResponseEntity<>(scoreService.deleteAll(), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(scoreService.deleteAll(), HttpStatus.OK);
     }
 
     @DeleteMapping(path = "{id}")

@@ -55,7 +55,7 @@ public class CloudController {
 
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
-        return new ResponseEntity<>(cloudService.deleteAll(), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(cloudService.deleteAll(), HttpStatus.OK);
     }
 
     @DeleteMapping(path = "{id}")
