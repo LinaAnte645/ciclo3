@@ -38,6 +38,9 @@ public class Client {
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
+    private int age;
+
     @JsonIgnoreProperties({ "client" })
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "client")
     private List<Message> messages;
