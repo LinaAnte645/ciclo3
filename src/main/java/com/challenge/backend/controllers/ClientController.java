@@ -56,7 +56,7 @@ public class ClientController {
 
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
-        return new ResponseEntity<>(clientService.deleteAll(), HttpStatus.OK);
+        return new ResponseEntity<>(clientService.deleteAll(), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping(path = "{id}")

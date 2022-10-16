@@ -55,7 +55,7 @@ public class ReservationController {
 
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
-        return new ResponseEntity<>(reservationService.deleteAll(), HttpStatus.OK);
+        return new ResponseEntity<>(reservationService.deleteAll(), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping(path = "{id}")
