@@ -48,6 +48,11 @@ public class ReservationController {
         return new ResponseEntity<>(reservationService.update(reservation), HttpStatus.OK);
     }
 
+    @PutMapping(path = "all")
+    public ResponseEntity<?> updateAll(@RequestBody Reservation reservation) {
+        return new ResponseEntity<>(reservationService.update(reservation), HttpStatus.OK);
+    }
+
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
         return new ResponseEntity<>(reservationService.deleteAll(), HttpStatus.OK);

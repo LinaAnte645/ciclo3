@@ -49,6 +49,11 @@ public class CategoryController {
         return new ResponseEntity<>(categoryService.update(category), HttpStatus.OK);
     }
 
+    @PutMapping(path = "all")
+    public ResponseEntity<?> updateAll(@RequestBody Category category) {
+        return new ResponseEntity<>(categoryService.update(category), HttpStatus.OK);
+    }
+
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
         return new ResponseEntity<>(categoryService.deleteAll(), HttpStatus.OK);

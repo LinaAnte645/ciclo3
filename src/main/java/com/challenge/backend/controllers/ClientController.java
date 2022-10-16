@@ -49,6 +49,11 @@ public class ClientController {
         return new ResponseEntity<>(clientService.update(client), HttpStatus.OK);
     }
 
+    @PutMapping(path = "all")
+    public ResponseEntity<?> updateAll(@RequestBody Client client) {
+        return new ResponseEntity<>(clientService.update(client), HttpStatus.OK);
+    }
+
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
         return new ResponseEntity<>(clientService.deleteAll(), HttpStatus.OK);

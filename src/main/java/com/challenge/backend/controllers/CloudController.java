@@ -48,6 +48,11 @@ public class CloudController {
         return new ResponseEntity<>(cloudService.update(cloud), HttpStatus.OK);
     }
 
+    @PutMapping(path = "all")
+    public ResponseEntity<?> updateAll(@RequestBody Cloud cloud) {
+        return new ResponseEntity<>(cloudService.update(cloud), HttpStatus.OK);
+    }
+
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
         return new ResponseEntity<>(cloudService.deleteAll(), HttpStatus.OK);

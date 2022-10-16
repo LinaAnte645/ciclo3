@@ -49,6 +49,11 @@ public class MessageController {
         return new ResponseEntity<>(messageService.update(message), HttpStatus.OK);
     }
 
+    @PutMapping(path = "all")
+    public ResponseEntity<?> updateAll(@RequestBody Message message) {
+        return new ResponseEntity<>(messageService.update(message), HttpStatus.OK);
+    }
+
     @DeleteMapping(path = "all")
     public ResponseEntity<?> deleteAll() {
         return new ResponseEntity<>(messageService.deleteAll(), HttpStatus.OK);
