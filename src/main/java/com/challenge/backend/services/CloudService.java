@@ -33,6 +33,8 @@ public class CloudService {
 
     public Cloud update(Cloud cloud) {
         Cloud previous = readById(cloud.getId());
+        if (cloud.getCategory() == null)
+            cloud.setCategory(previous.getCategory());
         cloudRepository.save(cloud);
         return previous;
     }
