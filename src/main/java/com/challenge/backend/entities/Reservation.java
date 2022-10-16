@@ -37,7 +37,7 @@ public class Reservation {
     private Date devolutionDate;
 
     @Column(nullable = false)
-    private String status;
+    private String status = "created";
 
     @JoinColumn(nullable = false)
     @JsonIgnoreProperties({ "reservations" })
